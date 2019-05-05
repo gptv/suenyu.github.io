@@ -1873,7 +1873,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fff;
+  background: #26ff66;
 }
 .feed-link,
 .chat {
@@ -2748,7 +2748,7 @@ hr {
   margin: 0;
 }
 .posts-expand .post-tags {
-  text-align: left;
+  text-align: center;
 }
 .posts-expand .post-tags a {
   padding: 1px 5px;
