@@ -1863,7 +1863,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #bd3c1b;
+  background: #ffc1ff;
 }
 .feed-link,
 .chat {
@@ -2849,15 +2849,4 @@ hr {
   color: #fc6423;
   border-bottom: none;
   border-bottom: 1px solid #fc6423;
-}
-.posts-expand .post-title {
-  font-size: 26px;
-  font-weight: 700;
-}
-.sidebar {
-  box-shadow: inset 0px 0px 10px 0px rgba(255,0,0,0.2);
-  background-color: #e8ecf1;
-}
-.sidebar-inner {
-  margin-top: 30px;
 }
