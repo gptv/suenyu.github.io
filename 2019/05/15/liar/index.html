@@ -130,7 +130,7 @@
 <meta property="og:site_name" content="无余说">
 <meta property="og:description" content="缘起昨天下午，突然遇到一个问题：如何在O365系统内查询一封教务群发邮件是否成功发送到某个学生。不得不查，因为据说学生家长说，事关合格性考试，学校没有通知到，我们不得不自己重新去报名；学校要承担责任。 开查每一届学生我们都做列表，避免骚扰邮件，限制特定邮箱可以发送，已确认该学生在群邮件列表内。 于是，Security&amp;amp;Compliance-mail flow-New message tra">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-15T01:23:13.005Z">
+<meta property="og:updated_time" content="2019-05-15T01:37:06.845Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="说没收到邮件，应该是在说谎">
 <meta name="twitter:description" content="缘起昨天下午，突然遇到一个问题：如何在O365系统内查询一封教务群发邮件是否成功发送到某个学生。不得不查，因为据说学生家长说，事关合格性考试，学校没有通知到，我们不得不自己重新去报名；学校要承担责任。 开查每一届学生我们都做列表，避免骚扰邮件，限制特定邮箱可以发送，已确认该学生在群邮件列表内。 于是，Security&amp;amp;Compliance-mail flow-New message tra">
@@ -439,7 +439,7 @@
                 
               
 
-              <time title="创建时间：2019-05-15 08:39:29 / 修改时间：09:23:13" itemprop="dateCreated datePublished" datetime="2019-05-15T08:39:29+08:00">2019-05-15</time>
+              <time title="创建时间：2019-05-15 08:39:29 / 修改时间：09:37:06" itemprop="dateCreated datePublished" datetime="2019-05-15T08:39:29+08:00">2019-05-15</time>
             
 
             
@@ -514,7 +514,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">888</span>
+                <span title="本文字数">759</span>
               
 
               
@@ -552,8 +552,8 @@
 <h3 id="开查"><a href="#开查" class="headerlink" title="开查"></a>开查</h3><p>每一届学生我们都做列表，避免骚扰邮件，限制特定邮箱可以发送，已确认该学生在群邮件列表内。</p>
 <p>于是，Security&amp;Compliance-mail flow-New message trace<br>完成之后一直显示未开始，于是，放狗。<br>google上之前有类似情况的人中，竟然有等好几天才出结果的，这个，不能忍。</p>
 <h3 id="放powershell"><a href="#放powershell" class="headerlink" title="放powershell"></a>放powershell</h3><p>先查到这封邮件的messageid，因为超出7天，所以</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Start-HistoricalSearch -messageid &lt; &gt; -SenderAddress &lt; &gt; -StartDate <span class="number">4</span>/<span class="number">4</span>/<span class="number">2019</span> -EndDate <span class="number">5</span>/<span class="number">5</span>/<span class="number">2019</span> | Get-MessageTraceDetail</span><br></pre></td></tr></table></figure>
-<p>结果并非直接呈现，还是转到了图形后台，大约30分钟后，418k的数据生成，下载核查到第356行，就是该学生的数据。<br>为此，fork了微软官方365的[github相关项目[(<a href="https://github.com/suenyu/office-docs-powershell/blob/master/exchange/exchange-ps/exchange/mail-flow/Start-HistoricalSearch.md)。" target="_blank" rel="noopener">https://github.com/suenyu/office-docs-powershell/blob/master/exchange/exchange-ps/exchange/mail-flow/Start-HistoricalSearch.md)。</a></p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Start-HistoricalSearch -messageid &lt; &gt; -SenderAddress &lt; &gt; -StartDate <span class="number">4</span>/<span class="number">4</span>/<span class="number">2019</span> -En</span><br><span class="line">dDate <span class="number">5</span>/<span class="number">5</span>/<span class="number">2019</span> | Get-MessageTraceDetail</span><br></pre></td></tr></table></figure>
+<p>结果并非直接呈现，还是转到了图形后台，大约30分钟后，418k的数据生成，下载核查到第356行，就是该学生的数据。<br>为此，fork了微软官方365的<a href="https://github.com/suenyu/office-docs-powershell/blob/master/exchange/exchange-ps/exchange/mail-flow/Start-HistoricalSearch.md" target="_blank" rel="noopener">github相关项目</a>。</p>
 <h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><p>该学生邮箱肯定有该邮件。<br>于是，和教务部门IT部门说明，类似情况，日后明确和学生说，学校通知明确是邮件发送，你不每天查收，耽误了事情就要自己承担。<br>技术角度，365内的操作记录均可以回溯追查，非要说没，那就数据说话。<font color="red"><strong>数据在，还说没收到，就是红色禁区“说谎”行为。</strong></font>，红色禁区，在北大附中，直接给予记过、留校察看、开除学籍处分。</p>
 <h3 id="给subit"><a href="#给subit" class="headerlink" title="给subit"></a>给subit</h3><p>如何让所有同学装上outlook客户端，设置好推送，接收学校重要信息，还是个问题。<br><a id="more"></a><br>如何将yammer推送做关闭，也需要我们给教程，以免邮件淹没。</p>
 
@@ -590,7 +590,7 @@
   <p><span>本文标题:</span>说没收到邮件，应该是在说谎</p>
   <p><span>文章作者:</span>suen</p>
   <p><span>发布时间:</span>2019年05月15日 - 08:39:29</p>
-  <p><span>最后更新:</span>2019年05月15日 - 09:23:13</p>
+  <p><span>最后更新:</span>2019年05月15日 - 09:37:06</p>
   <p><span>原始链接:</span><a href="/2019/05/15/liar/" title="说没收到邮件，应该是在说谎">https://suenyu.github.io/2019/05/15/liar/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://suenyu.github.io/2019/05/15/liar/" aria-label="复制成功！"></i></span>
   </p>
