@@ -396,7 +396,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://suenyu.github.io/2019/05/15/liar/">
+    <link itemprop="mainEntityOfPage" href="https://suenyu.github.io/2019/05/17/week20/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="suen">
@@ -416,7 +416,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/05/15/liar/" class="post-title-link" itemprop="url">说没收到邮件，应该是在说谎</a>
+                <a href="/2019/05/17/week20/" class="post-title-link" itemprop="url">荒腔走板</a>
               
             
           </h1>
@@ -441,12 +441,24 @@
                 
               
 
-              <time title="创建时间：2019-05-15 08:39:29 / 修改时间：09:37:06" itemprop="dateCreated datePublished" datetime="2019-05-15T08:39:29+08:00">2019-05-15</time>
+              <time title="创建时间：2019-05-17 16:01:53" itemprop="dateCreated datePublished" datetime="2019-05-17T16:01:53+08:00">2019-05-17</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-05-24 20:47:35" itemprop="dateModified" datetime="2019-05-24T20:47:35+08:00">2019-05-24</time>
               
             
           </span>
@@ -463,7 +475,14 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/O365/" itemprop="url" rel="index"><span itemprop="name">O365</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/每周分享/" itemprop="url" rel="index"><span itemprop="name">每周分享</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/PBL/" itemprop="url" rel="index"><span itemprop="name">PBL</span></a></span>
 
                 
                 
@@ -482,8 +501,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/05/15/liar/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/15/liar/" itemprop="commentCount"></span>
+                <a href="/2019/05/17/week20/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/17/week20/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -491,7 +510,7 @@
 
           
           
-            <span id="/2019/05/15/liar/" class="leancloud_visitors" data-flag-title="说没收到邮件，应该是在说谎">
+            <span id="/2019/05/17/week20/" class="leancloud_visitors" data-flag-title="荒腔走板">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -516,7 +535,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">759</span>
+                <span title="本文字数">1.8k</span>
               
 
               
@@ -530,7 +549,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">2 分钟</span>
+                <span title="阅读时长">5 分钟</span>
               
             </div>
           
@@ -551,18 +570,29 @@
 
       
         
-          <h3 id="缘起"><a href="#缘起" class="headerlink" title="缘起"></a>缘起</h3><p>昨天下午，突然遇到一个问题：如何在O365系统内查询一封教务群发邮件是否成功发送到某个学生。<br>不得不查，因为据说学生家长说，事关合格性考试，学校没有通知到，我们不得不自己重新去报名；学校要承担责任。</p>
-<h3 id="开查"><a href="#开查" class="headerlink" title="开查"></a>开查</h3><p>每一届学生我们都做列表，避免骚扰邮件，限制特定邮箱可以发送，已确认该学生在群邮件列表内。</p>
-<p>于是，Security&amp;Compliance-mail flow-New message trace<br>完成之后一直显示未开始，于是，放狗。<br>google上之前有类似情况的人中，竟然有等好几天才出结果的，这个，不能忍。</p>
-<h3 id="放powershell"><a href="#放powershell" class="headerlink" title="放powershell"></a>放powershell</h3><p>先查到这封邮件的messageid，因为超出7天，所以</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Start-HistoricalSearch -messageid &lt; &gt; -SenderAddress &lt; &gt; -StartDate <span class="number">4</span>/<span class="number">4</span>/<span class="number">2019</span> -En</span><br><span class="line">dDate <span class="number">5</span>/<span class="number">5</span>/<span class="number">2019</span> | Get-MessageTraceDetail</span><br></pre></td></tr></table></figure>
-<p>结果并非直接呈现，还是转到了图形后台，大约30分钟后，418k的数据生成，下载核查到第356行，就是该学生的数据。<br>为此，fork了微软官方365的<a href="https://github.com/suenyu/office-docs-powershell/blob/master/exchange/exchange-ps/exchange/mail-flow/Start-HistoricalSearch.md" target="_blank" rel="noopener">github相关项目</a>。</p>
-<h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><p>该学生邮箱肯定有该邮件。<br>于是，和教务部门IT部门说明，类似情况，日后明确和学生说，学校通知明确是邮件发送，你不每天查收，耽误了事情就要自己承担。<br>技术角度，365内的操作记录均可以回溯追查，非要说没，那就数据说话。<font color="red"><strong>数据在，还说没收到，就是红色禁区“说谎”行为。</strong></font>，红色禁区，在北大附中，直接给予记过、留校察看、开除学籍处分。</p>
-<h3 id="给subit"><a href="#给subit" class="headerlink" title="给subit"></a>给subit</h3><p>如何让所有同学装上outlook客户端，设置好推送，接收学校重要信息，还是个问题。<br>
+          <p>第20周，记录，分享。</p>
+<h3 id="腔板"><a href="#腔板" class="headerlink" title="腔板"></a>腔板</h3><p>这周主打荣誉文凭的事情，才发现最初的腔板已经荒走到不知道哪里。<br>初心要做培养目标的认定，龙种下去，收获的是北京市毕业证即北大附中普通文凭。<br>无可奈何，且改荣誉回来。<br>于是再次慨叹，一版一版变更，没有平台记录，烟云过眼还是小事，荒腔走板才是问题。<br>于是慨叹之后，彻底迁移文凭项目的讨论到github，从此刻起，滴水不漏，记录沉积，无论后人后事是谁何为，一切，都在这里。</p>
+<h3 id="未生先死的一个词"><a href="#未生先死的一个词" class="headerlink" title="未生先死的一个词"></a>未生先死的一个词</h3><p>准备梳理项目学习在国内的整体情况，已开头，扑面而来的感受是： 项目，一个未生之词，却已成枯骨。<br>翻译成人话：这个词，这么快，就被彻底用烂了；至少在号称学术的CNKI圈内如此。<br>若干所谓学科项目的论述，无数浮皮潦草的转发；名利收走，项目学习的阐释力则被耗尽。<br>当其无所不是的一刻，也就无所是了。<br>无可奈何，且回归原始，下周，找项目产生的初心论述去。</p>
+<h3 id="通了就知吗？"><a href="#通了就知吗？" class="headerlink" title="通了就知吗？"></a>通了就知吗？</h3><p>和一位老师聊通知的效度，一直未及回复，于此作答。<br>问题缘起：邮件通知了重要事务，学生没看，然后诬陷说学校没发，如何破解？技术上解决方案已经单发一文<a href="https://suenyu.github.io/2019/05/15/liar/">《说没收到邮件，应该是在说谎》</a>，但这件事，显然不是纯技术问题。<br><div class="note warning">
+            <p>1、核心疑问：学校（或者说教务）究竟需要不需要进行这个报名中期的提醒，这跟学校的教育理念是否一致？<br>2、核心疑问2：目前教务或者说学校各部门，对全体学生进行通知事项，最为有效的方式就是邮件，包括yammer，或者sharepoint新闻。但是所有这些举动都是单向的，通知的有效性无法控制；<br>3、承接上一点，当我们找到了没有阅读邮件或者没有阅读消息或者没有报名的人，接下来怎么办呢？还是绕回来，想办法要通知他，怎么通知呢？这真是让人伤脑筋<br>4、关于通知，最有效的方式是点对点。所以，在有班主任的环境下，这不存在问题。我们这个模式下，如有导师，看起来可以很好的进行人盯人的打补丁，但套上了保护绳就会削弱学生自主的意愿。在没有班主任和导师制的情况下，再要进行人对人的通知，这个工作就非常可怕了。更可怕的是，一旦出现了一次，势必之后次次如此，而且很可能需要通知的人数会越来越多（因为会有越来越多的人发现，如果自己不做，还是会有最后的提醒督促的）<br>5、在现有学校体系设计的模式下，在与让学生自主选择，承担后果的思想一致的前提下，学校还应该做什么，还可以做什么？</p>
+          </div><br>答案其实本问题内。通知，顾名思义，通告使知晓。如这位老师所说，无论yammer无论sharepoint，都只做到了前一半，单向通告。<br>靠上人能解决这个问题吗？能，但显然得不偿失；所以，还应该做什么的问题，需要新的答案。<br>答案，其实也很简单。</p>
+<p><font color="red"><strong>所有通知，全部双向。<br>唯有如此，才能回归本意：通告，并确认其知晓。</strong></font><br>所以下一个问题是，如何实现双向？</p>
+<p>两个层次的实现方式：</p>
+<p>仅需确认已知的实现方式：</p>
+<ul>
+<li>邮件中使用forms，通知内容放sharepoint，表单描述给通知全文和sharepoint链接，设置实名打开，题目仅设一道选择，是否已读。</li>
+<li>使用outlook群组的日历活动，一旦发布，会自动邮件给相关人员，系统会要求其确认是否参与。</li>
+</ul>
+<p>确认已知并需回复简单内容的实现方式：</p>
+<ul>
+<li>邮件中使用forms，通知内容放sharepoint，表单描述给通知全文和sharepoint链接，设置实名打开，题目设置文本填空。</li>
+</ul>
+<p>forms结果是excel，简单vlookup即可筛出未确认人员；outlook群组活动，会自动分类参与和不参与人员。熟悉的成本都较低。<br>前段时间推部门使用sharepoint，也是要解决谁点击过网页，我们就视为已读，但SP更新一直没到位，统计太麻烦所以暂不推荐。但通知内容从sharepoint内发布，一则版本更迭可以累积可见，一则部门工作可以明了清晰。当然，还有一个现时考虑是，一旦通知内容有更改，源头是sharepoint，则可以更改，直接邮件发的内容，不可更改。</p>
+<p>下一步，直接电话未确认同学。<br>一是确认其本次参与，更重要的是明确告知其要设置outlook推送，每天查阅邮件通知；如需技术支持，直接在yammer找subit求助。<br>明确本次电话录音存档，之后绝无二次。<br>这个工作，无论如何，都是初始成本必须付出的。<br>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/05/15/liar/#more" rel="contents">
+              <a class="btn" href="/2019/05/17/week20/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -620,7 +650,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -666,7 +696,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -703,7 +733,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">10</span>
+                      
+                    
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -858,7 +890,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">15k</span>
+    <span title="站点总字数">16k</span>
   
 
   
@@ -869,7 +901,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">37 分钟</span>
+    <span title="站点阅读时长">40 分钟</span>
   
 
 </div>
