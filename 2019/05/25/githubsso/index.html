@@ -126,13 +126,20 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="无余说">
-<meta property="og:url" content="https://suenyu.github.io/categories/书院/index.html">
+  <meta name="description" content="要推Github，就要最大限度解决365账号直接进入Github学校仓库的问题。前两周引入了第三方加入法，但一则有墙外验证码的坑，一则还是有安全隐患。所以，这个周末，重新想办法。几年前希望学生使用365账号单点进入各类MOOC时，在AZURE有过类似操作，当时实现了365账号直接进入Coursera的效果；于是，开整。 Azure 2 Github免费版AZURE没有足够权限，于是先启用 Ente">
+<meta name="keywords" content="sso">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Office365到学校Github的SSO">
+<meta property="og:url" content="https://suenyu.github.io/2019/05/25/githubsso/index.html">
 <meta property="og:site_name" content="无余说">
+<meta property="og:description" content="要推Github，就要最大限度解决365账号直接进入Github学校仓库的问题。前两周引入了第三方加入法，但一则有墙外验证码的坑，一则还是有安全隐患。所以，这个周末，重新想办法。几年前希望学生使用365账号单点进入各类MOOC时，在AZURE有过类似操作，当时实现了365账号直接进入Coursera的效果；于是，开整。 Azure 2 Github免费版AZURE没有足够权限，于是先启用 Ente">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://suenyu.github.io/images/sso1.png">
+<meta property="og:updated_time" content="2019-05-25T08:35:11.378Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="无余说">
+<meta name="twitter:title" content="Office365到学校Github的SSO">
+<meta name="twitter:description" content="要推Github，就要最大限度解决365账号直接进入Github学校仓库的问题。前两周引入了第三方加入法，但一则有墙外验证码的坑，一则还是有安全隐患。所以，这个周末，重新想办法。几年前希望学生使用365账号单点进入各类MOOC时，在AZURE有过类似操作，当时实现了365账号直接进入Coursera的效果；于是，开整。 Azure 2 Github免费版AZURE没有足够权限，于是先启用 Ente">
+<meta name="twitter:image" content="https://suenyu.github.io/images/sso1.png">
 
 
 
@@ -140,7 +147,7 @@
 
   
   
-  <link rel="canonical" href="https://suenyu.github.io/categories/书院/">
+  <link rel="canonical" href="https://suenyu.github.io/2019/05/25/githubsso/">
 
 
 
@@ -150,7 +157,7 @@
   };
 </script>
 
-  <title>分类: 书院 | 无余说</title>
+  <title>Office365到学校Github的SSO | 无余说</title>
   
 
 
@@ -198,7 +205,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -287,7 +294,7 @@
         
         
           
-          <li class="menu-item menu-item-categories menu-item-active">
+          <li class="menu-item menu-item-categories">
 
     
     
@@ -334,28 +341,6 @@
   
     
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
   
 
   
@@ -401,70 +386,308 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block category">
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>书院<small>分类</small>
-        </h1>
-      </div>
-
-      
-
-      
-      
-      
-
-      
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2019">2019</h2>
-        </div>
-      
-      
-
-        
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://suenyu.github.io/2019/05/25/githubsso/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="suen">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="无余说">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2019/05/23/houseornot/" itemprop="url">
-            
-              <span itemprop="name">选不选书院，是个问题</span>
-            
-          </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Office365到学校Github的SSO
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-23T10:30:12+08:00" content="2019-05-23">
-          05-23
-        </time>
-      </div>
+              
+            
+          </h1>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-25 15:19:12 / 修改时间：16:35:11" itemprop="dateCreated datePublished" datetime="2019-05-25T15:19:12+08:00">2019-05-25</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/github/" itemprop="url" rel="index"><span itemprop="name">github</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/O365/" itemprop="url" rel="index"><span itemprop="name">O365</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2019/05/25/githubsso/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/25/githubsso/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+            <span id="/2019/05/25/githubsso/" class="leancloud_visitors" data-flag-title="Office365到学校Github的SSO">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">647</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">2 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>要推Github，就要最大限度解决365账号直接进入Github学校仓库的问题。前两周引入了<a href="https://orgmanager.miguelpiedrafita.com/join/24676035" target="_blank" rel="noopener">第三方加入法</a>，但一则有墙外验证码的坑，一则还是有安全隐患。所以，这个周末，重新想办法。<br>几年前希望学生使用365账号单点进入各类MOOC时，在AZURE有过类似操作，当时实现了365账号直接进入Coursera的效果；于是，开整。</p>
+<h3 id="Azure-2-Github"><a href="#Azure-2-Github" class="headerlink" title="Azure 2 Github"></a>Azure 2 Github</h3><p>免费版AZURE没有足够权限，于是先启用 Enterprise Mobility + Security E5 Trial。获取权限后，很快就掉坑了。<br>按微软官方教程<a href="https://docs.microsoft.com/en-us/azure/active-directory/saas-apps/github-tutorial" target="_blank" rel="noopener">Tutorial: Azure Active Directory integration with GitHub</a>,SSO原本并不复杂。但因为很久之前在Azure加过Github内，没过脑子，直接在里面走，刚到SAML就卡死了，点击之后提示没有启用，没想太多，一个寻找非库内第三方加入的大弯就此开始，晚8点到12：30之后，无果，暂停。<br>周六，重新翻看教程，确定SAML节点肯定不应该卡死，于是，全部删除之前添加的GITHUB，依照教程，从0开始，30分钟后，测试账号顺利进入Github学校仓库。</p>
+<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p>365九宫格内一直有北大附中GITHUB，刚刚调整链接为<a href="https://github.com/orgs/pkuschool/sso" target="_blank" rel="noopener">https://github.com/orgs/pkuschool/sso</a> ，点击之后：</p>
+<p><center><img src="/images/sso1.png" class="[sso]" width="340" height="377"></center><br>点击继续，如该365未注册过Github，则进入注册页面并在注册完成后自动成为学校成员。<br>仍需验证邮箱，但自动成为校内成员的事情已解决。</p>
 
       
     </div>
 
+    
+
+    
+    
+    
+
+    <div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢阅读-------------</div>
+    
+</div>
+  
+</div>
+
+<div>
+    
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+
+  <p><span>本文标题:</span>Office365到学校Github的SSO</p>
+  <p><span>文章作者:</span>suen</p>
+  <p><span>发布时间:</span>2019年05月25日 - 15:19:12</p>
+  <p><span>最后更新:</span>2019年05月25日 - 16:35:11</p>
+  <p><span>原始链接:</span><a href="/2019/05/25/githubsso/" title="Office365到学校Github的SSO">https://suenyu.github.io/2019/05/25/githubsso/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://suenyu.github.io/2019/05/25/githubsso/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({   
+          title: "",   
+          text: '复制成功',   
+          html: false,
+          timer: 500,   
+          showConfirmButton: false
+        });
+      });
+    }));  
+</script>
+
+
+    
+</div>
+
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/sso/" rel="tag"><i class="fa fa-tag"></i> sso</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/24/week21/" rel="next" title="第21周分享">
+                <i class="fa fa-chevron-left"></i> 第21周分享
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
 
         </div>
         
@@ -484,8 +707,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -672,6 +904,23 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Azure-2-Github"><span class="nav-number">1.</span> <span class="nav-text">Azure 2 Github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#效果"><span class="nav-number">2.</span> <span class="nav-text">效果</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
 
@@ -829,7 +1078,9 @@
 
 
   
-  
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
 
 
   
@@ -879,6 +1130,8 @@
 
 
 
+
+  
 
 
   
