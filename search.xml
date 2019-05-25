@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Office365到学校Github的SSO]]></title>
     <url>%2F2019%2F05%2F25%2Fgithubsso%2F</url>
-    <content type="text"><![CDATA[要推Github，就要最大限度解决365账号直接进入Github学校仓库的问题。前两周引入了第三方加入法，但一则有墙外验证码的坑，一则还是有安全隐患。所以，这个周末，重新想办法。几年前希望学生使用365账号单点进入各类MOOC时，在AZURE有过类似操作，当时实现了365账号直接进入Coursera的效果；于是，开整。 Azure 2 Github免费版AZURE没有足够权限，于是先启用 Enterprise Mobility + Security E5 Trial。获取权限后，很快就掉坑了。按微软官方教程Tutorial: Azure Active Directory integration with GitHub,SSO原本并不复杂。但因为很久之前在Azure加过Github内，没过脑子，直接在里面走，刚到SAML就卡死了，点击之后提示没有启用，没想太多，一个寻找非库内第三方加入的大弯就此开始，晚8点到12：30之后，无果，暂停。周六，重新翻看教程，确定SAML节点肯定不应该卡死，于是，全部删除之前添加的GITHUB，依照教程，从0开始，30分钟后，测试账号顺利进入Github学校仓库。 效果365九宫格内一直有北大附中GITHUB，刚刚调整链接为https://github.com/orgs/pkuschool/sso ，点击之后： 点击继续，如该365未注册过Github，则进入注册页面并在注册完成后自动成为学校成员。仍需验证邮箱，但自动成为校内成员的事情已解决。]]></content>
+    <content type="text"><![CDATA[要推Github，就要最大限度解决365账号直接进入Github学校仓库的问题。前两周引入了第三方加入法，但一则有墙外验证码的坑，一则还是有安全隐患。所以，这个周末，重新想办法。几年前希望学生使用365账号单点进入各类MOOC时，在AZURE有过类似操作，当时实现了365账号直接进入Coursera的效果；于是，开整。 Azure 2 Github免费版AZURE没有足够权限，于是先启用 Enterprise Mobility + Security E5 Trial。获取权限后，很快就掉坑了。按微软官方教程Tutorial: Azure Active Directory integration with GitHub,SSO原本并不复杂。但因为很久之前在Azure加过Github，没过脑子，直接在里面走，刚到SAML就卡死了，点击之后提示没有启用，没想太多，一个寻找非库内第三方加入的大弯就此开始，晚8点到12：30之后，无果，暂停。周六，重新翻看教程，确定SAML节点肯定不应该卡死，于是，全部删除之前添加的GITHUB，依照教程，从0开始，30分钟后，测试账号顺利进入Github学校仓库。 效果365九宫格内一直有北大附中GITHUB，刚刚调整链接为https://github.com/orgs/pkuschool/sso ，点击之后： 点击继续，如该365未注册过Github，则进入注册页面并在注册完成后自动成为学校成员。仍需验证邮箱，但自动成为校内成员的事情已解决。]]></content>
       <categories>
         <category>github</category>
         <category>O365</category>
@@ -160,8 +160,8 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>github</tag>
         <tag>O365</tag>
+        <tag>github</tag>
       </tags>
   </entry>
 </search>
